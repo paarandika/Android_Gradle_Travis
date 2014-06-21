@@ -58,28 +58,28 @@ public class CreateActivityTest extends ActivityInstrumentationTestCase2<CreateA
         this.sendKeys(KeyEvent.KEYCODE_BACK);
     }
 
-//    public void testMeasurementActivity() throws Exception {
-//        getActivity().runOnUiThread(new Runnable() {
-//
-//            @Override
-//            public void run() {
-//                name.setText("test_name");
-//            }
-//        });
-//
-//        getInstrumentation().waitForIdleSync();
-//        assertEquals("Name incorrect", "test_name", name.getText().toString());
-//
-//        getActivity().runOnUiThread(new Runnable() {
-//
-//            @Override
-//            public void run() {
-//                email.setText("test_email");
-//            }
-//        });
-//
-//        getInstrumentation().waitForIdleSync();
-//        assertEquals("Email incorrect", "test_email", email.getText().toString());
+    public void testMeasurementActivity() throws Exception {
+        getActivity().runOnUiThread(new Runnable() {
+
+            @Override
+            public void run() {
+                name.setText("test_name");
+            }
+        });
+
+        getInstrumentation().waitForIdleSync();
+        assertEquals("Name incorrect", "test_name", name.getText().toString());
+
+        getActivity().runOnUiThread(new Runnable() {
+
+            @Override
+            public void run() {
+                email.setText("test_email");
+            }
+        });
+
+        getInstrumentation().waitForIdleSync();
+        assertEquals("Email incorrect", "test_email", email.getText().toString());
 //        Instrumentation.ActivityMonitor monitor = getInstrumentation().addMonitor(MeasurementActivity.class.getName(), null, false);
 //        activity.setData();
 //        activity.closer();
@@ -91,5 +91,5 @@ public class CreateActivityTest extends ActivityInstrumentationTestCase2<CreateA
 //        this.sendKeys(KeyEvent.KEYCODE_BACK);
 //        this.sendKeys(KeyEvent.KEYCODE_BACK);
 //
-//    }
+    }
 }
