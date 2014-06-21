@@ -90,7 +90,7 @@ public class CreateActivityTest extends ActivityInstrumentationTestCase2<CreateA
         Instrumentation.ActivityMonitor monitor = getInstrumentation().addMonitor(MeasurementActivity.class.getName(), null, false);
         activity.setData();
         activity.closer();
-        MeasurementActivity startedActivity = (MeasurementActivity) monitor.waitForActivityWithTimeout(1000);
+        MeasurementActivity startedActivity = (MeasurementActivity) monitor.waitForActivityWithTimeout(3000);
         assertNotNull("incorrect",startedActivity);
 //        Button save=(Button)startedActivity.findViewById(R.id.measurement_btn_save);
 //        assertNotNull(save);
