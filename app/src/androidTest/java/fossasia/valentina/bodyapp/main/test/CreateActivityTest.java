@@ -65,7 +65,7 @@ public class CreateActivityTest extends ActivityInstrumentationTestCase2<CreateA
         this.sendKeys(KeyEvent.KEYCODE_BACK);
     }
 
-    public void testMeasurementActivity() throws Exception {
+/*     public void testMeasurementActivity() throws Exception {
         getActivity().runOnUiThread(new Runnable() {
 
             @Override
@@ -86,7 +86,7 @@ public class CreateActivityTest extends ActivityInstrumentationTestCase2<CreateA
         });
 
         getInstrumentation().waitForIdleSync();
-        assertEquals("Email incorrect", "test_email", email.getText().toString());
+        assertEquals("Email incorrect", "test_email", email.getText().toString()); */
 //        Instrumentation.ActivityMonitor monitor = getInstrumentation().addMonitor(MeasurementActivity.class.getName(), null, false);
 //        activity.setData();
 //        activity.closer();
@@ -97,6 +97,6 @@ public class CreateActivityTest extends ActivityInstrumentationTestCase2<CreateA
 //        TouchUtils.clickView(this, save);
 //        this.sendKeys(KeyEvent.KEYCODE_BACK);
 //        this.sendKeys(KeyEvent.KEYCODE_BACK);
-
-    }
+//
+//   }
 }
