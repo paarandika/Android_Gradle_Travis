@@ -34,7 +34,6 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
     @Override
     public void setUp() throws Exception {
         super.setUp();
-
         activity = getActivity();
         create = (Button) activity.findViewById(R.id.main_btn_create);
         saved = (Button) activity.findViewById(R.id.main_btn_saved);
