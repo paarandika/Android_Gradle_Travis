@@ -33,5 +33,16 @@ public class CreateActivityTest extends ActivityInstrumentationTestCase2<CreateA
         create=(Button)activity.findViewById(R.id.create_btn_create);
         email=(EditText)activity.findViewById(R.id.create_txt_gmail);
         name=(EditText)activity.findViewById(R.id.create_txt_name);
+        unit=(Spinner)activity.findViewById(R.id.create_spn_unit);
+        gender=(Spinner)activity.findViewById(R.id.create_spn_gender);
+    }
+
+    public void testUIComponents() throws Exception {
+        assertNotNull(cancel);
+        assertNotNull(create);
+        assertNotNull(email);
+        assertNotNull(name);
+        assertNotNull(unit);
+        assertNotNull(gender);
     }
 }
