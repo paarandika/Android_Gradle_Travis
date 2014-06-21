@@ -21,7 +21,6 @@ import android.widget.Button;
  * Landing Screen of the app. All the functions will start from here.
  *
  */
-
 public class MainActivity extends Activity implements OnClickListener{
 
 	private Button create;
