@@ -8,6 +8,7 @@ import android.app.Instrumentation;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.TouchUtils;
 import android.view.KeyEvent;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -39,6 +40,12 @@ public class CreateActivityTest extends ActivityInstrumentationTestCase2<CreateA
         name=(EditText)activity.findViewById(R.id.create_txt_name);
         unit=(Spinner)activity.findViewById(R.id.create_spn_unit);
         gender=(Spinner)activity.findViewById(R.id.create_spn_gender);
+        getInstrumentation().runOnMainSync(new Runnable() {
+            @Override
+            public void run() {
+                getActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD);
+            }
+        });
     }
 
     public void testUIComponents() throws Exception {
