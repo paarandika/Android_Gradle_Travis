@@ -87,16 +87,16 @@ public class CreateActivityTest extends ActivityInstrumentationTestCase2<CreateA
 
         getInstrumentation().waitForIdleSync();
         assertEquals("Email incorrect", "test_email", email.getText().toString());
-//        Instrumentation.ActivityMonitor monitor = getInstrumentation().addMonitor(MeasurementActivity.class.getName(), null, false);
-//        activity.setData();
-//        activity.closer();
-//        MeasurementActivity startedActivity = (MeasurementActivity) monitor.waitForActivityWithTimeout(1000);
-//        assertNotNull("incorrect",startedActivity);
-////        Button save=(Button)startedActivity.findViewById(R.id.measurement_btn_save);
-////        assertNotNull(save);
-////        TouchUtils.clickView(this, save);
-//        this.sendKeys(KeyEvent.KEYCODE_BACK);
-//        this.sendKeys(KeyEvent.KEYCODE_BACK);
-//
+        Instrumentation.ActivityMonitor monitor = getInstrumentation().addMonitor(MeasurementActivity.class.getName(), null, false);
+        activity.setData();
+        activity.closer();
+        MeasurementActivity startedActivity = (MeasurementActivity) monitor.waitForActivityWithTimeout(1000);
+        assertNotNull("incorrect",startedActivity);
+        Button save=(Button)startedActivity.findViewById(R.id.measurement_btn_save);
+        assertNotNull(save);
+        TouchUtils.clickView(this, save);
+        this.sendKeys(KeyEvent.KEYCODE_BACK);
+        this.sendKeys(KeyEvent.KEYCODE_BACK);
+
     }
 }
