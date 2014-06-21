@@ -43,6 +43,7 @@ public class UserManagerTest extends ActivityInstrumentationTestCase2<MainActivi
 
     }
 
+    
     public void testSetCurrent() throws Exception {
         um.setCurrent(user);
         assertNotNull(um.getCurrent());
